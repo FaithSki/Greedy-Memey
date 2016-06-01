@@ -4,11 +4,13 @@ public class Scroogey extends GreedStrategy{
 	public int choose(GreedOption[] options, int[] dice, int bank) {
 		boolean is300 = false;
 		for(GreedOption o : options){
-			if ((dice.length) >= 3){
-				
-			}
-			else{
-				// take all available combos, in descending order of value, then re-roll
+			if(o.optionType() == GreedOption.SCORE){
+				if ((dice.length) >= 3){
+					
+				}
+				else{
+					// take all available combos, in descending order of value, then re-roll
+				}
 			}
 		}
 	}
