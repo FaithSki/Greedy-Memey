@@ -327,8 +327,9 @@ public class GreedGame {
 	}
 	
 	public static void main(String[] args){
+		Scroogey current = new Scroogey();
 		System.out.println("Your score was "
 		+(new GreedGame(true)).evaluatePlayer(new 
-				HumanGreedPlayer(),1));
+				ComputerGreedStrategyPlayer(current),1));
 	}
 }
