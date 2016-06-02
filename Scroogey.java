@@ -2,17 +2,22 @@
 public class Scroogey extends GreedStrategy{
 
 	public int choose(GreedOption[] options, int[] dice, int bank) {
-		boolean is300 = false;
 		for(GreedOption o : options){
 			if(o.optionType() == GreedOption.SCORE){
-				if ((dice.length) >= 3){
-					
+				if ((dice.length) >= 4){
+					if (bank >= 300){
+						return (options.length + 2);
+					}
+					else{
+						return 1;
+					}
 				}
 				else{
-					// take all available combos, in descending order of value, then re-roll
+					return (options.length + 2);
 				}
 			}
 		}
+		return (options.length + 2);
 	}
 
 	public String playerName() {
@@ -20,7 +25,7 @@ public class Scroogey extends GreedStrategy{
 	}
 
 	public String author() {
-		return "Chris, Ivan, Jeffery, and Allen";
+		return "Chris, Ivan, Jeffery, and Allan";
 	}
 
 }
