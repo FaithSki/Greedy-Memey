@@ -12,12 +12,16 @@ public class StrategyEvaluator {
 	public static double practiceGreed(){
 		Scroogey hereWeGo = new Scroogey();
 		return (new GreedGame(true))
-				.evaluatePlayer(new ComputerGreedStrategyPlayer(hereWeGo), 1);
+				.evaluatePlayer(new ComputerGreedStrategyPlayer(hereWeGo), 10000);
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(practiceGreed());
+		//System.out.println(practiceGreed());
+		double score1 = practiceGreed();
+		double score2 = practiceGreed();
+		double score3 = practiceGreed();
+		double avg = ((score1 + score2 + score3) / 3);
+		System.out.println("\naverage between three sets of ten-thousand rounds: " + avg);
 	}
 
 }
-Your choices are:
