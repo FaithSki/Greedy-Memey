@@ -26,7 +26,7 @@ public class Scroogey extends GreedStrategy{
 			System.out.println("DEBUG: Rerolling");
 			return(findType(options,1));
 		}
-		if (dice.length > 3){
+		if (dice.length >= 3){
 			reroll = true;
 			System.out.println("DEBUG: Taking highest valued combo");
 			return(findType(options,3));
